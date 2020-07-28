@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main(void)
+{
+	int a,i;
+	
+	printf("数値を入力してください\n");
+	scanf("%d",&a);//整数で受け取る
+	if(a<=0 || a==1)
+	{
+		printf("0と1以外を入力して下さい");
+	}
+	if(a==2)
+	{
+		printf("2は素数です");
+	}
+	for(i=2;i<a;i++)
+	{
+		if(a%i==0)
+		{
+		printf("%d \nは素数ではありません" ,a);
+		break;
+		}
+		else if(i==a-1)
+		{
+		printf("%d \nは素数です:",a);
+		}
+	}
+	return 0 ;
+}
+
+	//2019/04/25
+	
+	/*
+	2019/10/07 
+	
+	if(a<=0 && a==1)を || へ修正
+	*/
